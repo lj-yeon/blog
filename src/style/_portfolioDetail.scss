@@ -1,0 +1,375 @@
+.portfolio-detail {
+  overflow-x: hidden;
+
+  section {
+    width: 100vw;
+    margin: 0 auto;
+    height: 100vh;
+
+    > div {
+      width: 100%;
+      max-width: 1920px;
+      height: 100%;
+    }
+  }
+
+  .black-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #101012;
+    z-index: 2;
+    pointer-events: none;
+    transform: translateX(-50vw);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    &.right {
+      transform: translateX(50vw);
+      animation: slideRight 0.3s forwards;
+    }
+    &.left {
+      transform: translateX(-50vw);
+      animation: slideLeft 0.3s forwards;
+    }
+  }
+
+  @keyframes slideRight {
+    from {
+      transform: translateX(50vw);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideLeft {
+    from {
+      transform: translateX(-50vw);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  button.link-go {
+    position: fixed;
+    top: 3%;
+    left: 1%;
+    z-index: 3;
+    color: white;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    img {
+      width: 20px;
+    }
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transition: background-color 0.2s, color 0.2s;
+    }
+  }
+  button.home-go {
+    position: fixed;
+    top: 3%;
+    right: 1%;
+    z-index: 3;
+    color: white;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    img {
+      width: 20px;
+    }
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transition: background-color 0.2s, color 0.2s;
+    }
+  }
+
+  .prev-next {
+    width: 90%;
+    height: 70px;
+    position: fixed;
+    top: 40%;
+    left: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    opacity: 0.05;
+    transition: opacity 0.4s;
+    button {
+      width: 60px;
+      height: 60px;
+      background-color: rgb(51, 51, 51);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.8;
+      img {
+        width: 40%;
+      }
+    }
+    &:hover,
+    &.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  .intro-section {
+    background-color: #101012;
+
+    display: flex;
+    align-items: center;
+
+    .intro-img {
+      padding: 5%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img.vinyl {
+        height: 75%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      img.intro,
+      video.intro {
+        height: 70%;
+      }
+    }
+    .intro-description {
+      color: white;
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 35%;
+      position: absolute;
+      z-index: 2;
+      bottom: 5%;
+      left: 5%;
+      h2 {
+        font-weight: normal;
+        font-size: 1em;
+      }
+      h1 {
+        font-size: 2em;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+      }
+      ul {
+        font-size: 0.8em;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 25px 0 50px 0;
+        li {
+          span {
+            display: inline-block;
+            width: 8%;
+          }
+          p {
+            padding: 3px 10px;
+            color: rgb(163, 153, 121);
+            border-radius: 20px;
+            background-color: rgb(223, 216, 192);
+            font-weight: bold;
+            font-size: 13px;
+            display: inline;
+            margin-right: 5px;
+          }
+        }
+      }
+      p {
+        font-size: 0.8em;
+        width: 100%;
+      }
+    }
+  }
+  .descrip-section {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    .star {
+      position: absolute;
+      z-index: 1;
+
+      &.star1 {
+        width: 20%;
+        right: 2%;
+        bottom: 5cqb;
+      }
+      &.star2 {
+        width: 10%;
+        right: 20%;
+        bottom: 5%;
+      }
+    }
+    > div {
+      width: 50%;
+      height: 100%;
+      padding: 5%;
+      &:nth-child(1) {
+        background-color: #e5e5e5;
+      }
+      &:nth-child(2) {
+        background-color: #999982;
+      }
+    }
+
+    h2 {
+      font-size: 2em;
+    }
+    h3 {
+      font-size: 0.8em;
+      margin-top: 20px;
+    }
+    .preview-images {
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: 80%;
+      margin-top: 5%;
+      padding-right: 2%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2열 균등 분할 */
+      gap: 12px; /* 이미지 사이 간격 */
+      justify-items: center; /* 이미지 가운데 정렬 */
+
+      .preview-image {
+        width: 100%; /* 그리드 칸에 꽉 차게 */
+        height: auto; /* 부모 그리드 셀 높이에 맞춤 */
+        object-fit: contain; /* 비율 유지하며 꽉 채우기 */
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+      }
+
+      /* Firefox용 */
+      scrollbar-width: thin; /* 스크롤바 두께 얇게 */
+      scrollbar-color: rgba(137, 128, 128, 0.3) rgb(205, 205, 205); /* thumb 색상 / track 색상 */
+
+      /* Webkit 계열 브라우저용 */
+      &::-webkit-scrollbar {
+        width: 9px; /* 스크롤바 너비 */
+      }
+
+      &::-webkit-scrollbar-track {
+        background: rgb(205, 205, 205); /* 트랙 배경 */
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(137, 128, 128, 0.3); /* thumb 색상 */
+        border-radius: 4px; /* 모서리 둥글게 */
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(
+          167,
+          158,
+          158,
+          0.6
+        ); /* 호버 시 색상 조금 진하게 */
+      }
+    }
+    .img-modal {
+      position: fixed;
+      z-index: 5;
+      left: 0;
+      top: 0;
+      background: rgba(0, 0, 0, 0.7);
+      width: 100vw;
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding: 5% 0; /* 위아래 여백 줘서 여유 확보 */
+      text-align: center;
+
+      /*스크롤 커스텀*/
+
+      .img-modal-close {
+        position: fixed;
+        top: 10%;
+        right: 10%;
+        border: none;
+        font-size: 2rem;
+        color: #ffffff;
+        cursor: pointer;
+        z-index: 2;
+        border-radius: 50%;
+        background-color: rgba(79, 79, 79, 0.5);
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+
+      img {
+        width: 60%;
+        height: auto;
+        max-width: 1200px;
+        border-radius: 5px;
+      }
+    }
+    .timeline-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      color: #e7e7e7;
+
+      .timeline-item {
+        padding: 16px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        color: #f5f5f5;
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.5s, transform 0.5s;
+        z-index: 2;
+        &.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .timeline-number {
+          font-size: 1.5em;
+          font-weight: 400;
+        }
+        .timeline-title {
+          font-weight: bold;
+          font-size: 1em;
+          margin-bottom: 4px;
+          margin: 8px 0 10px 0;
+          .timeline-duration {
+            font-size: 0.8em;
+            margin-bottom: 6px;
+            margin-left: 10px;
+            padding: 2px 8px;
+            background-color: #e9e9e9;
+            font-weight: 600;
+            color: #222;
+            border-radius: 20px;
+          }
+        }
+
+        .timeline-detail {
+          font-size: 0.8em;
+          word-break: keep-all;
+          overflow-wrap: break-word;
+        }
+      }
+    }
+  }
+}

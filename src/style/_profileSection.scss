@@ -1,0 +1,96 @@
+.profile-section {
+  position: relative;
+  background-color: #0f1112;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  h4 {
+    font-size: 1.5em;
+  }
+  .box-wrap {
+    color: rgb(29, 29, 36);
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    margin-top: 20px;
+
+    li {
+      font-size: 1em;
+      font-weight: 500;
+      line-height: 1.8em;
+    }
+  }
+  .icon {
+    position: absolute;
+
+    &:nth-child(1) {
+      right: 5%;
+      bottom: 5%;
+      width: 15%;
+      animation: float 4s ease-in-out infinite;
+    }
+    &:nth-child(2) {
+      top: 5%;
+      right: 7%;
+      width: 20%;
+      animation: float 3.95s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(1);
+      }
+      50% {
+        transform: translateY(-10px) scale(1.02);
+      }
+      100% {
+        transform: translateY(0) scale(1);
+      }
+    }
+  }
+  .profile-imgcard {
+    width: 30%;
+    position: relative;
+    img {
+      width: 100%;
+      border: 15px solid rgb(29, 29, 36);
+      border-radius: 50px;
+    }
+    .contact {
+      position: absolute;
+      left: -7%;
+      top: -7%;
+      width: 70%;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+      h2 {
+        font-size: 25px;
+        display: block;
+        line-height: 1em;
+        font-weight: bold;
+        margin-bottom: 5%;
+        background-color: #0f1112;
+        color: white;
+        padding: 3%;
+      }
+    }
+  }
+  .profile-infocard {
+    // border: 1px solid red;
+    width: 60%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .skill {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 2.5%;
+      margin-top: 5%;
+      .skill-category {
+        width: 45%;
+        margin-bottom: 2.5%;
+      }
+    }
+  }
+}

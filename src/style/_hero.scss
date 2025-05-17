@@ -1,0 +1,195 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  > div.portfolio-letters {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; // 참고용 너비 설정, 필요에 따라 조정하세요
+    height: 100%;
+    z-index: 1;
+
+    @keyframes bounceDropRotate {
+      0% {
+        transform: translateY(-100vh) translateX(0vw) rotate(var(--drop-rot));
+      }
+      40% {
+        transform: translateY(100vh) translateX(var(--drop-x))
+          rotate(var(--drop-rot));
+      }
+      100% {
+        transform: translateY(0) translateX(0vw) rotate(var(--drop-rot));
+      }
+    }
+
+    @keyframes floating {
+      0%,
+      100% {
+        transform: translateY(0) rotate(var(--drop-rot));
+      }
+      50% {
+        transform: translateY(-2%) rotate(var(--drop-rot));
+      }
+    }
+
+    .portfolio-letter {
+      height: 17vw;
+      position: absolute;
+    }
+    .portfolio-letter.bounce {
+      animation: bounceDropRotate 1.5s ease-in-out forwards;
+    }
+
+    .portfolio-letter.floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+
+    /* 윗줄 */
+    .portfolio-letter:nth-child(1) {
+      /* P */
+      top: -5%;
+      left: -3%;
+      animation-delay: 0s;
+      --drop-x: -5vw;
+      --drop-rot: -20deg;
+    }
+    .portfolio-letter:nth-child(2) {
+      /* O */
+      top: -20%;
+      left: 15%;
+      animation-delay: 0.1s;
+      --drop-x: -4vw;
+      --drop-rot: 15deg;
+    }
+    .portfolio-letter:nth-child(3) {
+      /* R */
+      top: 3%;
+      left: 30%;
+      animation-delay: 0.2s;
+      --drop-x: -6vw;
+      --drop-rot: -10deg;
+    }
+    .portfolio-letter:nth-child(4) {
+      /* T */
+      top: -3%;
+      left: 45%;
+      animation-delay: 0.3s;
+      --drop-x: -4.5vw;
+      --drop-rot: 10deg;
+    }
+
+    /* 중간 줄 */
+    .portfolio-letter:nth-child(5) {
+      /* F */
+      top: 30%;
+      left: 15%;
+      animation-delay: 0.4s;
+      --drop-x: -3.5vw;
+      --drop-rot: -15deg;
+    }
+    .portfolio-letter:nth-child(6) {
+      /* O */
+      top: 40%;
+      left: 30%;
+      animation-delay: 0.5s;
+      --drop-x: -2.5vw;
+      --drop-rot: 12deg;
+    }
+
+    /* 아랫줄 */
+    .portfolio-letter:nth-child(7) {
+      /* L */
+      top: 65%;
+      left: 25%;
+      animation-delay: 0.6s;
+      --drop-x: -2vw;
+      --drop-rot: -10deg;
+    }
+    .portfolio-letter:nth-child(8) {
+      /* I */
+      top: 85%;
+      left: 40%;
+      animation-delay: 0.7s;
+      --drop-x: -1.5vw;
+      --drop-rot: 15deg;
+    }
+    .portfolio-letter:nth-child(9) {
+      /* O */
+      top: 70%;
+      left: 55%;
+      animation-delay: 0.8s;
+      --drop-x: -3vw;
+      --drop-rot: -50deg;
+    }
+  }
+
+  > div.portfolio-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 8.5vw;
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    height: 95%;
+    h1 {
+      font-size: 1em;
+      line-height: 1em;
+      &.title {
+      }
+      &.name {
+        text-align: right;
+      }
+    }
+    div {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+      font-size: 0.2em;
+      font-weight: bold;
+      text-align: right;
+      ul {
+        width: 30%;
+        li {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .scroll-down-indicator {
+    position: absolute;
+    left: 50%;
+    bottom: 32px;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 100%;
+    //animation: scroll-bounce 2s infinite;
+    text-align: center;
+    opacity: 0.8;
+    img {
+      width: 45px;
+      height: 45px;
+      border: 2px solid #363636;
+      border-radius: 50%;
+    }
+  }
+
+  @keyframes scroll-bounce {
+    0%,
+    100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(5px);
+    }
+  }
+}
