@@ -3,15 +3,15 @@ const profiles = [
     id: 1,
     name: "이원호",
     englishName: "LEE WONHO",
-    email: "wonho.dev@example.com",
-    github: "https://github.com/wonho", // 실제 주소로 변경 가능
-    image: "/images/wonho.jpg",
+    email: "pabang0620@naver.com",
+    github: "https://github.com/pabang0620",
+    image: "/images/main/wonho.jpg",
     color: "#ebebeb",
     phone: "010-8868-0490",
     career: [
       "22.09 ~ 23.03 - SK플래닛 웹 풀스택 개발자 양성 교육",
       "23.1 ~ 12 - 크몽 웹서비스 외주(기획, 디자인, 개발)",
-      "23.12 ~ 현재 - 퍼널스 개발팀(기획 및 개발)",
+      "23.12 ~ 현재 - (주)퍼널스(FUNNELS) 개발팀(기획 및 개발)",
     ],
     skills: {
       frontend: [
@@ -49,15 +49,14 @@ const profiles = [
 
     email: "lj_yeon_@naver.com",
     phone: "010-4113-4306",
-    imageBackground: "/images/main/jback.jpg",
-    image: "/images/main/jfront.jpg",
+    image: "/images/main/jaeyeon.jpg",
     color: "#f6f6f6",
     career: [
-      "20.03 ~ 22.10 - 디자인 및 홍보",
-      "22.10 ~ 23.05 - UI/UX디자인&웹퍼블리셔 과정 수료",
+      "20.03 ~ 22.10 - (주)에코베이스 : 디자인 및 홍보",
+      "22.10 ~ 23.05 - UI/UX디자인 & 웹퍼블리셔 과정 수료",
       "23.06 ~ 23.12 - 웹개발전문가 과정 수료",
-      "23.12 ~ 현재 - 크몽 웹서비스 외주(기획, 디자인, 개발)",
-      "23.12 ~ 현재 - 퍼널스 개발팀(기획 및 개발)",
+      "23.12 ~ 현재 - 크몽 웹서비스 외주 : 기획, 디자인, 개발",
+      "23.12 ~ 현재 - (주)퍼널스(FUNNELS) 개발팀 : 기획 및 개발",
     ],
     skills: {
       frontend: [

@@ -71,6 +71,25 @@
       background-color: rgba(255, 255, 255, 0.2);
       transition: background-color 0.2s, color 0.2s;
     }
+    &:hover .testAccount {
+      display: block;
+    }
+
+    .testAccount {
+      position: absolute;
+      text-align: left;
+      bottom: -200%;
+      font-size: 13px;
+      font-weight: normal;
+      width: 100%;
+      display: none;
+      h4 {
+        margin-bottom: 3px;
+        font-size: 15px;
+        font-weight: normal;
+      }
+      line-height: 25px;
+    }
   }
   button.home-go {
     position: fixed;

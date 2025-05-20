@@ -35,6 +35,17 @@ const ProfileSection = ({ profile }) => {
               <h2>{profile.englishName}</h2>
               <p>👤 {profile.name}</p>
               <p>📬 {profile.email}</p>
+              {profile.github && (
+                <p>
+                  <a
+                    href={profile.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    🐈‍⬛ {profile.github}
+                  </a>
+                </p>
+              )}
               <p>☎️ {profile.phone}</p>
             </div>
           </div>

@@ -91,6 +91,14 @@ const PortfolioDetail = ({ projects, basePath = "" }) => {
             alt="홈페이지 바로가기"
           />
           바로가기 링크
+          {project.testAccount && (
+            <div className="testAccount">
+              <h4>테스트 계정</h4>
+              아이디 : {project.testAccount.id}
+              <br />
+              비밀번호 : {project.testAccount.password}
+            </div>
+          )}
         </button>
       )}
       <button

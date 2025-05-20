@@ -3,6 +3,7 @@ import Hero from "./main/Hero";
 import ProfileSection from "./main/ProfileSection";
 import PortfolioList from "./main/PortfolioList";
 import Loading from "./Loading";
+import { Helmet } from "react-helmet";
 
 const MainPage = ({ heroProfile, projects, basePath }) => {
   const [loading, setLoading] = useState(true);
@@ -42,6 +43,9 @@ const MainPage = ({ heroProfile, projects, basePath }) => {
 
   return (
     <div className="main">
+      <Helmet>
+        <title>{heroProfile.englishName}</title>
+      </Helmet>
       {isLoadingVisible && <Loading isLoading={loading} />}
 
       <div ref={heroRef}>

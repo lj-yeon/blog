@@ -34,7 +34,7 @@ const teamProjects = [
       },
     ],
     stack: ["React", "Node", "Express", "AWS"],
-    link: "https://dentotal.co.kr",
+    link: "https://dentotal.co.kr/login",
   },
   {
     owner: "team",
@@ -43,6 +43,7 @@ const teamProjects = [
       "회사 분할로 인해 단기간 내 구축이 필요한 상황에서 유동적으로 요구사항이 변경되는 환경 속에서도 빠르게 구조를 설계하고 개발한 공식 웹사이트입니다. 페이지 구성과 기능 구현을 기획과 동시에 진행하며, 실시간 피드백을 반영하는 민첩한 개발 경험을 수행했습니다.",
     period: "2024 06 ~ 08",
     folder: "funnels",
+    imgCount: 6,
     timeline: [
       {
         title: "기획 수신 및 화면 구성 정리",
@@ -96,7 +97,7 @@ const teamProjects = [
     stack: ["React", "Node", "Express", "AWS"],
     link: "https://blog.funnelsolution.co.kr/",
     testLink: "https://blog.smilevent.co.kr/999/999/aaaaaa",
-    credentials: {
+    testAccount: {
       id: "test1",
       password: "a12341234",
     },
